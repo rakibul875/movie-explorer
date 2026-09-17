@@ -6,8 +6,8 @@ MovieExplorer is a responsive, feature-rich web application built with **React**
 
 ## 🚀 Live Demo & Links
 
-* **🌐 Live Deployment:** [Your Live Vercel/Netlify Link Here]
-* **📂 GitHub Repository:** [Your GitHub Repository Link Here]
+* **🌐 Live Deployment:** [[ Live Vercel Link](https://movie-explorer-eta-six.vercel.app/)]
+* **📂 GitHub Repository:** [[ GitHub Repository Link](https://github.com/rakibul875/movie-explorer)]
 
 ---
 
