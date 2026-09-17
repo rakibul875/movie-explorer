@@ -54,5 +54,9 @@ Follow these steps to run the project locally on your machine:
 
 1. **Clone the repository:**
    ```bash
-   git clone [https://github.com/your-username/movie-explorer.git](https://github.com/your-username/movie-explorer.git)
+   git clone [https://github.com/rakibul875/movie-explorer.git](https://github.com/rakibul875/movie-explorer.git)
    cd movie-explorer
+   then
+   npm install
+   then 
+   npm run dev
