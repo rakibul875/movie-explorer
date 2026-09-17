@@ -6,13 +6,13 @@ import MovieModal from './components/MovieModal';
 import Footer from './components/Footer';
 
 function App() {
-  const [activeTab, setActiveTab] = useState('home'); // 'home' or 'movies'
+  const [activeTab, setActiveTab] = useState('home');
   const [shows, setShows] = useState([]);
   const [searchQuery, setSearchQuery] = useState('');
   const [loading, setLoading] = useState(false);
   const [selectedShow, setSelectedShow] = useState(null);
 
-  // Initial Data Fetch (All Shows)
+
   useEffect(() => {
     fetchShows();
   }, []);
@@ -22,7 +22,7 @@ function App() {
     try {
       const response = await fetch('https://api.tvmaze.com/shows');
       const data = await response.json();
-      setShows(data.slice(0, 20)); // Limit to initial 20 items
+      setShows(data.slice(0, 20)); 
     } catch (error) {
       console.error('Error fetching shows:', error);
     } finally {
@@ -30,7 +30,6 @@ function App() {
     }
   };
 
-  // Search API Call
   const handleSearch = async (e) => {
     const query = e.target.value;
     setSearchQuery(query);
@@ -44,7 +43,7 @@ function App() {
     try {
       const response = await fetch(`https://api.tvmaze.com/search/shows?q=${query}`);
       const data = await response.json();
-      // TVMaze search response map
+   
       setShows(data.map(item => item.show));
     } catch (error) {
       console.error('Error searching shows:', error);
@@ -56,17 +55,17 @@ function App() {
   return (
     <div className="min-h-screen bg-slate-900 text-slate-100 flex flex-col justify-between font-sans">
       <div>
-        {/* Navbar */}
+       
         <Navbar activeTab={activeTab} setActiveTab={setActiveTab} />
 
-        {/* Main Section Routing */}
+   
         {activeTab === 'home' ? (
           <div>
             <Hero onExploreClick={() => setActiveTab('movies')} />
           </div>
         ) : (
           <main className="max-w-7xl mx-auto px-4 py-8">
-            {/* Search Bar */}
+           
             <div className="mb-8 max-w-xl mx-auto">
               <div className="relative">
                 <input
@@ -79,7 +78,7 @@ function App() {
               </div>
             </div>
 
-            {/* Movies Grid / Loader */}
+           
             {loading ? (
               <div className="flex justify-center items-center py-20">
                 <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-indigo-500"></div>
@@ -103,7 +102,7 @@ function App() {
         )}
       </div>
 
-      {/* Details Modal */}
+    
       {selectedShow && (
         <MovieModal
           show={selectedShow}
@@ -111,7 +110,7 @@ function App() {
         />
       )}
 
-      {/* Footer */}
+     
       <Footer />
     </div>
   );

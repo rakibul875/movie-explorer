@@ -9,7 +9,7 @@ const MovieModal = ({ show, onClose }) => {
   const ratingValue = rating?.average ? rating.average : 'N/A';
   const imageUrl = image?.original || image?.medium || 'https://via.placeholder.com/400x600?text=No+Image';
 
-  // HTML Tag সরানোর জন্য Regex (TVMaze Summary তে HTML থাকে)
+
   const cleanSummary = summary
     ? summary.replace(/<[^>]*>?/gm, '')
     : 'No overview available for this show.';
@@ -21,7 +21,7 @@ const MovieModal = ({ show, onClose }) => {
     >
       <div 
         className="bg-slate-900 border border-slate-700 rounded-2xl max-w-2xl w-full text-white overflow-hidden shadow-2xl relative"
-        onClick={(e) => e.stopPropagation()} // Backdrop এ ক্লিক করলে যেন কন্টেন্ট ক্লিকের সাথে মডাল বন্ধ না হয়ে যায়
+        onClick={(e) => e.stopPropagation()} 
       >
         {/* Close Icon Button */}
         <button
@@ -31,7 +31,7 @@ const MovieModal = ({ show, onClose }) => {
           <X className="w-6 h-6" />
         </button>
 
-        {/* Modal Header Image */}
+        
         <div className="h-64 sm:h-80 w-full overflow-hidden relative">
           <img
             src={imageUrl}
@@ -41,11 +41,11 @@ const MovieModal = ({ show, onClose }) => {
           <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-transparent to-transparent"></div>
         </div>
 
-        {/* Modal Content */}
+        
         <div className="p-6">
           <h2 className="text-3xl font-bold mb-3">{name}</h2>
 
-          {/* Rating, Year & Genres */}
+        
           <div className="flex flex-wrap items-center gap-4 text-sm mb-4">
             <span className="flex items-center text-yellow-400 font-semibold">
               <Star className="w-4 h-4 fill-current mr-1" /> Rating: {ratingValue}
@@ -60,7 +60,7 @@ const MovieModal = ({ show, onClose }) => {
             )}
           </div>
 
-          {/* Overview */}
+       
           <div className="mb-6">
             <h3 className="text-lg font-semibold text-slate-300 mb-2">Overview:</h3>
             <p className="text-gray-400 leading-relaxed text-sm sm:text-base">
@@ -68,7 +68,7 @@ const MovieModal = ({ show, onClose }) => {
             </p>
           </div>
 
-          {/* Bottom Close Button */}
+       
           <div className="flex justify-end">
             <button
               onClick={onClose}

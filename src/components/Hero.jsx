@@ -3,7 +3,7 @@ import React from 'react';
 const Hero = ({ onExploreClick }) => {
   return (
     <div className="relative bg-slate-900 text-white py-24 px-6 text-center overflow-hidden">
-      {/* Background Gradient / Decorative Elements */}
+
       <div className="absolute inset-0 bg-gradient-to-r from-indigo-900/50 via-slate-900/80 to-purple-900/50 z-0"></div>
 
       <div className="relative z-10 max-w-3xl mx-auto">
