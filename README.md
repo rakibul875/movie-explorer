@@ -1,16 +1,58 @@
-# React + Vite
+# 🎬 MovieExplorer – Interactive Movie & Show Finder
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+MovieExplorer is a responsive, feature-rich web application built with **React** and **Tailwind CSS**. It allows users to browse popular TV shows and movies, search for specific titles in real-time, and view comprehensive details using an interactive modal interface powered by the **TVMaze API**.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🚀 Live Demo & Links
 
-## React Compiler
+* **🌐 Live Deployment:** [Your Live Vercel/Netlify Link Here]
+* **📂 GitHub Repository:** [Your GitHub Repository Link Here]
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## ✨ Features & Requirements
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### 🏠 Home Page & Navigation
+* **Navbar:** Sticky header featuring the brand logo and navigation controls.
+* **Hero Banner:** Dynamic layout with gradient backdrop, project tagline, and a direct Call-To-Action (CTA) button to jump straight into movie browsing.
+* **Footer:** Clean footer displaying copyright information (`© 2026 MovieExplorer`).
+
+### 🔍 Movie Listing & Real-Time Search
+* **Dynamic Search:** Real-time search bar fetching results by title using the TVMaze Search API (`/search/shows?q=:query`).
+* **Grid Layout:** Fully responsive CSS Grid/Flexbox layout optimized for desktop, tablet, and mobile displays.
+* **Movie Cards:** Custom components showing movie posters, titles, release years, and average ratings.
+
+### 🎞️ Detailed Information Modal
+* Interactive overlay showing backdrop/poster artwork, title, rating, release date, genres, and rich overview descriptions.
+* Dismissible via the dedicated close (`✕`) button or backdrop click.
+
+---
+
+## 🛠️ Tech Stack & API
+
+| Layer | Technology |
+| :--- | :--- |
+| **Frontend Library** | React.js |
+| **Styling** | Tailwind CSS |
+| **Icons** | Lucide React |
+| **API Provider** | [TVMaze API](https://www.tvmaze.com/api) |
+| **Build Tool** | Vite |
+
+---
+
+## 📐 API Endpoints Used
+
+* **Fetch All Shows:** `GET https://api.tvmaze.com/shows`
+* **Search Shows:** `GET https://api.tvmaze.com/search/shows?q=:query`
+
+---
+
+## 🚀 Getting Started
+
+Follow these steps to run the project locally on your machine:
+
+1. **Clone the repository:**
+   ```bash
+   git clone [https://github.com/your-username/movie-explorer.git](https://github.com/your-username/movie-explorer.git)
+   cd movie-explorer
