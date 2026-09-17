@@ -23,7 +23,6 @@ const MovieModal = ({ show, onClose }) => {
         className="bg-slate-900 border border-slate-700 rounded-2xl max-w-2xl w-full text-white overflow-hidden shadow-2xl relative"
         onClick={(e) => e.stopPropagation()} 
       >
-        {/* Close Icon Button */}
         <button
           onClick={onClose}
           className="absolute top-4 right-4 bg-slate-800 hover:bg-slate-700 text-gray-300 rounded-full p-2 z-10 transition duration-200"
